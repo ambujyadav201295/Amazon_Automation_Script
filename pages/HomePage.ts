@@ -19,9 +19,17 @@ export class HomePage extends GenricMethods {
     }
 
 
+
     async dismissPoup() {
+    if (await this.poupMsg.isVisible({ timeout: 5000 }).catch(() => false)) {
         await this.poupMsg.click();
     }
+}
+
+
+    // async dismissPoup() {
+    //     await this.poupMsg.click();
+    // }
 
     async enterProductName(value: string) {
         await this.searchBox.fill(value);

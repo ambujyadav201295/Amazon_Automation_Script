@@ -32,19 +32,26 @@ export class LoginPage extends GenricMethods {
 
 
     async clickOnContinueBT() {
-        await this.continueBT.click();
+        if (await this.continueBT.isVisible({ timeout: 5000 }).catch(() => false)) {
+            await this.continueBT.click();
+        }
     }
 
 
-    async HoverOnAccountBT(){
+    // async clickOnContinueBT() {
+    //     await this.continueBT.click();
+    // }
+
+
+    async HoverOnAccountBT() {
         await this.accountLink.hover();
     }
 
 
-    async clickOnSignInLink(){
-       await this.signInLink.click();
+    async clickOnSignInLink() {
+        await this.signInLink.click();
     }
-    
+
 
 
     async enterEmail(email: string) {

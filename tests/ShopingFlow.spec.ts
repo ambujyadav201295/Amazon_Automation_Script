@@ -8,7 +8,7 @@ test('verify ShopingFlow', async ({ page, loginPage, homePage, productPage, cart
 
     await loginPage.enterOpenUrl(TestData.porductData.url);
     //await page.waitForTimeout(3000);
-    //await loginPage.clickOnContinueBT();
+    await loginPage.clickOnContinueBT();
    // await page.waitForTimeout(3000);
     await homePage.dismissPoup();
     await loginPage.HoverOnAccountBT();
