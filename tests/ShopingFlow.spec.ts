@@ -9,13 +9,13 @@ test('verify ShopingFlow', async ({ page, loginPage, homePage, productPage, cart
     await loginPage.enterOpenUrl(TestData.porductData.url);
     //await page.waitForTimeout(3000);
     //await loginPage.clickOnContinueBT();
-    await page.waitForTimeout(3000);
+   // await page.waitForTimeout(3000);
     await homePage.dismissPoup();
     await loginPage.HoverOnAccountBT();
-    await page.waitForTimeout(3000);
+   // await page.waitForTimeout(3000);
     await loginPage.clickOnSignInLink();
     await loginPage.enterEmail(TestData.porductData.email);
-    await page.waitForTimeout(3000);
+   // await page.waitForTimeout(3000);
     await loginPage.submitEmailCountinue();
     await loginPage.enterPassword(TestData.porductData.password);
     await loginPage.clicOnSignIn();
@@ -32,7 +32,7 @@ test('verify ShopingFlow', async ({ page, loginPage, homePage, productPage, cart
 
 
 
-test('cart Validation', async ({page})=>{
+// test('cart Validation', async ({page})=>{
 
 
-});
+// });

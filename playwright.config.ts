@@ -13,7 +13,7 @@ import { defineConfig, devices } from '@playwright/test';
  */
 export default defineConfig({
   
- timeout: 600000,
+ timeout: 60000,
  expect:{
   timeout:20000},
   testDir: './tests',
@@ -28,7 +28,7 @@ export default defineConfig({
   retries: process.env.CI ? 2 : 0,
 
   /* Opt out of parallel tests on CI. */
-  workers: process.env.CI ? 2 : undefined,
+  workers: process.env.CI ? 1 : undefined,
 
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: 'html',
@@ -50,10 +50,10 @@ export default defineConfig({
     viewport:{width:1280, height:720},
 
     //Action timeout
-    actionTimeout:300000,
+    actionTimeout:30000,
 
     //Navigation Timeout
-    navigationTimeout: 120000,
+    navigationTimeout: 30000,
   },
 
   /* Configure projects for major browsers */
